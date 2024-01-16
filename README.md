@@ -25,3 +25,27 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## PrimeNG
+
+Biblioteca de estilo [primeNG](https://www.primefaces.org/primeng-v16-lts/installation) page.
+
+## PrimeFLEX
+
+Biblioteca de estilo [primeFlex](https://primeflex.org/) page.
+
+## PrimeICONS
+
+Biblioteca de estilo [primeiCONS](https://www.primefaces.org/primeng-v16-lts/icons) page.
+
+## ngx-cookie-service
+
+Serviço angular para ler, definir e excluir cookies do navegador. [ngx-cookie-service](https://www.npmjs.com/package/ngx-cookie-service) page.
+
+## STOCK-API API 
+
+Back-end [API](https://github.com/marcosJuniorPassarella/stock-api) page.
+1 - Baixar projeto
+2 - npm install
+3- npm run dev

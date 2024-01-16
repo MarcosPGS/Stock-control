@@ -1,0 +1,66 @@
+<!-- FORM NOVO PRODUTO -->
+<div *ngIf="this.productAction?.event?.action === this.addProductEvent">
+  <form [formGroup]="formAddProduct" >
+    <div class="card flex flex-column md:flex-column gap-3">
+      <input pInputText placeholder="Nome"  formControlName="name"/>
+
+      <p-dropdown
+      styleClass="w-full"
+      [options]="categoriesDatas"
+      optionLabel="name"
+      optionValue="id"
+      placeholder="Selecione uma categoria"
+      formControlName="category_id"
+      ></p-dropdown>
+      <input  pInputText placeholder="Preço"  formControlName="price"/>
+
+      <input  pInputText placeholder="Descrição"  formControlName="description"/>
+
+      <input pInputText placeholder="Quantidade"  formControlName="amount"/>
+    </div>
+
+
+    <div class="flex flex-row  justify-content-center align-content-center alingn-items-center m-1">
+      <p-button
+      type="submit"
+      label="Concluir"
+      [disabled]="formAddProduct.invalid"
+      (click)="handleSubmitAddProduct()">
+
+      </p-button>
+    </div>
+  </form>
+</div>
+
+<!-- FORM EDITAR PRODUTO -->
+<div *ngIf="this.productAction?.event?.action === this.editProductEvent">
+  <form [formGroup]="formEditProduct" >
+    <div class="card flex flex-column md:flex-column gap-3">
+      <input pInputText placeholder="Nome"  formControlName="name"/>
+      <div *ngIf="this.renderDropdown === true">
+        <p-dropdown
+        styleClass="w-full"
+        [options]="categoriesDatas"
+        optionLabel="name"
+        optionValue="id"
+        formControlName="category_id"
+        ></p-dropdown>
+      </div>
+      <input  pInputText placeholder="Preço"  formControlName="price"/>
+      <input  pInputText placeholder="Descrição"  formControlName="description"/>
+      <input pInputText placeholder="Quantidade"  formControlName="amount"/>
+    </div>
+
+
+    <div class="flex flex-row  justify-content-center align-content-center alingn-items-center m-1">
+      <p-button
+      type="submit"
+      label="Concluir"
+      [disabled]="formEditProduct.invalid"
+      (click)="handleSubmitEditProduct()">
+
+      </p-button>
+    </div>
+  </form>
+</div>
+

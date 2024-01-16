@@ -1,0 +1,31 @@
+
+<div class="center-form" >
+      <form [formGroup]="form">
+
+      <p-card
+        header="Criar conta"
+        subheader="Crie já sua conta gratuita!"
+        styleClass="mt-10 shadow-8 surface-200"
+      >
+
+      <div class="flex justify-content-center align-content-center text-align-center ">
+        <input type="text" pInputText placeholder="Nome" formControlName="name"/>
+      </div>
+      <div class="flex justify-content-center align-content-center text-align-center mt-3">
+        <input type="e-mail" pInputText placeholder="E-mail" formControlName="email"/>
+      </div>
+
+      <div class="flex justify-content-center align-content-center text-align-center mt-3">
+        <input type="password" pInputText placeholder="senha" formControlName="password"/>
+      </div>
+
+      <div class=" card flex justify-content-center  mt-3" >
+          <button pButton pRipple label="Criar conta" [disabled]="this.form.invalid" (click)="signupUser()"></button>
+      </div>
+
+      <a routerLink="/signin" class="flex justify-content-center align-content-center text-align-center mt-3 text-red-600 font-semibold registrar-conta">
+        Fazer login
+      </a>
+    </p-card>
+      </form>
+    </div>
